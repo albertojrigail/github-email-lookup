@@ -150,7 +150,7 @@ export default function HomePage() {
               </UnderlineLink>
               {' from '}
               <UnderlineLink
-                href='https://twitter.com/albertojrigail'
+                href='https://vivid.lol'
                 className='text-2xl font-extrabold'
               >
                 <span className='bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text pb-2 text-transparent'>
