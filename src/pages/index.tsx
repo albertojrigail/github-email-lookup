@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
@@ -92,47 +93,69 @@ export default function HomePage() {
 
   return (
     <Layout>
-      {/* <Seo templateTitle='Home' /> */}
       <Seo />
-
       <main>
         <section className='bg-white bg-gradient-to-r from-gray-900 to-gray-600'>
-          <div className='layout flex min-h-screen flex-col items-center justify-center gap-2 text-center'>
-            <h1 className='mt-4 text-white'>Need a Github user's emails? 👀</h1>
-            <br></br>
-            <div className='mb-4 flex flex-row items-center gap-4'>
-              <input
-                className='focus:shadow-outline w-full appearance-none rounded-sm border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none'
-                id='username'
-                type='text'
-                value={username}
-                placeholder='Username'
-                onChange={(e) => setUsername(e.target.value)}
-                onSubmit={submit}
-              />
-              <button
-                className='rounded-sm bg-gradient-to-r from-fuchsia-500 via-red-600 to-orange-400 p-1.5 font-extrabold text-white'
-                onClick={submit}
-              >
-                Submit
-              </button>
-            </div>
-            {error ? (
-              <div key='error' className='text-white'>
-                {error}
+          <div className='layout flex min-h-screen flex-col items-center justify-start gap-2 text-center'>
+            <div className='flex flex-col'>
+              <h1 className='mt-4 pt-6 text-white'>
+                Need a Github user's emails? 👀
+              </h1>
+              <br></br>
+              <div className='mb-4 flex flex-row items-center gap-4'>
+                <input
+                  className='focus:shadow-outline w-full appearance-none rounded-sm border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none'
+                  id='username'
+                  type='text'
+                  value={username}
+                  placeholder='Username'
+                  onChange={(e) => setUsername(e.target.value)}
+                  onSubmit={submit}
+                />
+                <button
+                  className='rounded-sm bg-gradient-to-r from-pink-500 to-blue-500 p-1.5 font-extrabold  text-white'
+                  onClick={submit}
+                >
+                  Submit
+                </button>
               </div>
-            ) : (
-              emails.map((email) => (
-                <div className='text-white' key={email}>
-                  {email}
+              {error ? (
+                <div key='error' className='text-white'>
+                  {error}
                 </div>
-              ))
-            )}
-            <footer className='absolute bottom-2 text-gray-700'>
+              ) : (
+                emails.map((email) => (
+                  <div className='text-white' key={email}>
+                    {email}
+                  </div>
+                ))
+              )}
+            </div>
+            <footer className='absolute bottom-2 text-white'>
               © {new Date().getFullYear()} By{' '}
               <UnderlineLink href='https://twitter.com/albertojrigail'>
                 Alberto Rigail
               </UnderlineLink>
+              {' from '}
+              <UnderlineLink
+                href='https://twitter.com/albertojrigail'
+                className='text-2xl font-extrabold'
+              >
+                <span className='bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent'>
+                  Vivid
+                </span>
+              </UnderlineLink>
+              <Link href='https://vivid.lol'>
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="mx-auto w-1/3 scale-[100.5%] rounded md:max-w-none pt-4"
+                >
+                  <source src='/images/vivid-demo.mp4' type='video/mp4' />
+                </video>
+              </Link>
             </footer>
           </div>
         </section>
