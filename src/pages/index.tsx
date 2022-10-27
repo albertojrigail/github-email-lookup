@@ -95,16 +95,17 @@ export default function HomePage() {
     <Layout>
       <Seo />
       <main>
-        <section className='bg-white bg-gradient-to-r from-gray-900 to-gray-600'>
-          <div className='layout flex min-h-screen flex-col items-center justify-start gap-2 text-center'>
-            <div className='flex flex-col'>
+        <section className='h-screen bg-[url("/svg/layered-waves-haikei.svg")] bg-cover bg-bottom'>
+          <div className='layout flex min-h-screen flex-col items-center justify-between gap-2 text-center'>
+            <div className='flex flex-grow flex-col'>
+              <div className='pb-60'>div</div>
               <h1 className='mt-4 pt-6 text-white'>
-                Need a Github user's emails? 👀
+                Need a Github user's email? 👀
               </h1>
               <br></br>
-              <div className='mb-4 flex flex-row items-center gap-4'>
+              <div className='mb-4 flex h-10 flex-row items-center gap-4'>
                 <input
-                  className='focus:shadow-outline w-full appearance-none rounded-sm border py-2 px-3 leading-tight text-gray-700 shadow focus:outline-none'
+                  className='focus:shadow-outline bord h-full w-full appearance-none rounded-md border border-gray-400 bg-transparent px-3 leading-tight text-gray-700 shadow focus:outline-none'
                   id='username'
                   type='text'
                   value={username}
@@ -113,10 +114,10 @@ export default function HomePage() {
                   onSubmit={submit}
                 />
                 <button
-                  className='rounded-sm bg-gradient-to-r from-pink-500 to-blue-500 p-1.5 font-extrabold  text-white'
+                  className='h-full rounded-md bg-pink-600 px-4 text-2xl font-extrabold text-white'
                   onClick={submit}
                 >
-                  Submit
+                  ⮕
                 </button>
               </div>
               {error ? (
@@ -131,7 +132,18 @@ export default function HomePage() {
                 ))
               )}
             </div>
-            <footer className='absolute bottom-2 text-white'>
+            <footer className='bottom-2 text-white'>
+              <Link href='https://vivid.lol' className='md:w-1/3 md:max-w-none'>
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className='mx-auto w-2/3 scale-[100.5%] rounded pt-4 pb-2 md:w-1/3 md:max-w-none'
+                >
+                  <source src='/images/vivid-demo.mp4' type='video/mp4' />
+                </video>
+              </Link>
               © {new Date().getFullYear()} By{' '}
               <UnderlineLink href='https://twitter.com/albertojrigail'>
                 Alberto Rigail
@@ -141,23 +153,12 @@ export default function HomePage() {
                 href='https://twitter.com/albertojrigail'
                 className='text-2xl font-extrabold'
               >
-                <span className='bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent'>
+                <span className='bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text pb-2 text-transparent'>
                   Vivid
                 </span>
               </UnderlineLink>
-              <Link href='https://vivid.lol' className='md:w-1/3 md:max-w-none'>
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className='mx-auto w-2/3 scale-[100.5%] rounded pt-4 md:w-1/3 md:max-w-none'
-                >
-                  <source src='/images/vivid-demo.mp4' type='video/mp4' />
-                </video>
-              </Link>
             </footer>
-          </div>
+          </div>{' '}
         </section>
       </main>
     </Layout>
