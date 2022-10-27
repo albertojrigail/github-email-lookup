@@ -145,13 +145,13 @@ export default function HomePage() {
                   Vivid
                 </span>
               </UnderlineLink>
-              <Link href='https://vivid.lol'>
+              <Link href='https://vivid.lol' className='md:w-1/3 md:max-w-none'>
                 <video
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="mx-auto scale-[100.5%] rounded md:max-w-none pt-4 w-2/3 md:w-1/3"
+                  className='mx-auto w-2/3 scale-[100.5%] rounded pt-4 md:w-1/3 md:max-w-none'
                 >
                   <source src='/images/vivid-demo.mp4' type='video/mp4' />
                 </video>
