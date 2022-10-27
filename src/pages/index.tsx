@@ -151,7 +151,7 @@ export default function HomePage() {
                   loop
                   muted
                   playsInline
-                  className="mx-auto w-1/3 scale-[100.5%] rounded md:max-w-none pt-4"
+                  className="mx-auto scale-[100.5%] rounded md:max-w-none pt-4 w-2/3 md:w-1/3"
                 >
                   <source src='/images/vivid-demo.mp4' type='video/mp4' />
                 </video>
