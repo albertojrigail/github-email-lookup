@@ -53,13 +53,13 @@ export default function Seo(props: SeoProps) {
       <meta property='og:site_name' content={meta.siteName} />
       <meta property='og:description' content={meta.description} />
       <meta property='og:title' content={meta.title} />
-      <meta name='image' property='og:image' content='/images/og' />
+      <meta name='image' property='og:image' content='/images/og.jpg' />
       {/* Twitter */}
-      <meta name='twitter:card' content='summary_large_image' />
+      <meta name='twitter:card' content='/images/og.jpg' />
       <meta name='twitter:site' content='@albertojrigail' />
       <meta name='twitter:title' content={meta.title} />
       <meta name='twitter:description' content={meta.description} />
-      <meta name='twitter:image' content={meta.image} />
+      <meta name='twitter:image' content='/images/og.jpg' />
       {meta.date && (
         <>
           <meta property='article:published_time' content={meta.date} />
