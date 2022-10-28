@@ -104,8 +104,7 @@ export default function HomePage() {
       <main>
         <section className='h-screen bg-[url("/svg/layered-waves-haikei.svg")] bg-cover bg-bottom'>
           <div className='layout flex min-h-screen flex-col items-center justify-between gap-2 text-center'>
-            <div className='flex flex-grow flex-col'>
-              <div className='pb-60'>div</div>
+            <div className="flex flex-grow flex-col justify-center">
               <h1 className='mt-4 pt-6 text-white'>
                 Need a Github user's email? 👀
               </h1>
