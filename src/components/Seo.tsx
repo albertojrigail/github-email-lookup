@@ -13,7 +13,7 @@ const defaultMeta = {
    * No need to be filled, will be populated with openGraph function
    * If you wish to use a normal image, just specify the path below
    */
-  image: '/images/vivid.lol',
+  image: '/favicon/favicon.ico',
 };
 
 type SeoProps = {
@@ -78,7 +78,7 @@ export default function Seo(props: SeoProps) {
 
       {/* Favicons */}
       <meta name='msapplication-TileColor' content='#ffffff' />
-      <meta name='msapplication-TileImage' content='/favicon/favicon.ico' />
+      <meta name='msapplication-TileImage' content='/images/favicon.ico' />
       <meta name='theme-color' content='#18181b' />
     </Head>
   );
