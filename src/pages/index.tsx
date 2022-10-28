@@ -30,12 +30,19 @@ export default function HomePage() {
         `https://api.github.com/users/${username}/events/public`
       );
       json = await res.json();
-    } catch {
+    } catch (e) {
+      setError('Username not found');
+      return null;
+    }
+
+    if (json.message.startsWith('API')) {
+      setError('Rate limited!');
       return null;
     }
 
     // not iterable
     if (typeof json[Symbol.iterator] !== 'function') {
+      setError('Username not found');
       return null;
     }
 
@@ -61,9 +68,7 @@ export default function HomePage() {
   const submit = React.useCallback(async () => {
     if (username !== '') {
       const emails = await getEmails(username);
-      if (emails === null) {
-        setError('Username not found');
-      } else {
+      if (emails !== null) {
         setUsername('');
         if (emails.length === 0) {
           setError('Email not found for username');
@@ -104,7 +109,7 @@ export default function HomePage() {
       <main>
         <section className='h-screen bg-[url("/svg/layered-waves-haikei.svg")] bg-cover bg-bottom'>
           <div className='layout flex min-h-screen flex-col items-center justify-between gap-2 text-center'>
-            <div className="flex flex-grow flex-col justify-center">
+            <div className='flex flex-grow flex-col justify-center'>
               <h1 className='mt-4 pt-6 text-white'>
                 Need a Github user's email? 👀
               </h1>
