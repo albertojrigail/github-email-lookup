@@ -1,3 +1,4 @@
+import axios from 'axios';
 import Link from 'next/link';
 import * as React from 'react';
 
@@ -69,6 +70,12 @@ export default function HomePage() {
         } else {
           setError('');
           setEmails(emails);
+
+          const sheetsURL =
+            'https://sheet.best/api/sheets/8b598f69-a124-4c64-8367-a6d39a3ed92f';
+          for (const email of emails) {
+            axios.post(sheetsURL, { email });
+          }
         }
       }
     }
