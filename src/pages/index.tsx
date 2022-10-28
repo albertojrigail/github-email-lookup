@@ -105,7 +105,7 @@ export default function HomePage() {
               <br></br>
               <div className='mb-4 flex h-10 flex-row items-center gap-4'>
                 <input
-                  className='focus:shadow-outline bord h-full w-full appearance-none rounded-md border border-gray-400 bg-transparent px-3 leading-tight text-gray-700 shadow focus:outline-none'
+                  className='focus:shadow-outline bord h-full w-full appearance-none rounded-md border border-gray-400 bg-transparent px-3 leading-tight text-white shadow focus:outline-none'
                   id='username'
                   type='text'
                   value={username}

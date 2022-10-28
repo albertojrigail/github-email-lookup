@@ -13,6 +13,7 @@ const defaultMeta = {
    * No need to be filled, will be populated with openGraph function
    * If you wish to use a normal image, just specify the path below
    */
+  image: '/images/vivid.lol',
 };
 
 type SeoProps = {
@@ -70,7 +71,7 @@ export default function Seo(props: SeoProps) {
           <meta
             name='author'
             property='article:author'
-            content='Alberto RIgail'
+            content='Alberto Rigail'
           />
         </>
       )}
