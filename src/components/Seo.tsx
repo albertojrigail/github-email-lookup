@@ -60,6 +60,7 @@ export default function Seo(props: SeoProps) {
       <meta name='twitter:title' content={meta.title} />
       <meta name='twitter:description' content={meta.description} />
       <meta name='twitter:image' content='/images/og.jpg' />
+      <link rel='icon' type='image/png' href='/images/vivid.png' />
       {meta.date && (
         <>
           <meta property='article:published_time' content={meta.date} />
@@ -78,7 +79,7 @@ export default function Seo(props: SeoProps) {
 
       {/* Favicons */}
       <meta name='msapplication-TileColor' content='#ffffff' />
-      <meta name='msapplication-TileImage' content='/images/favicon.ico' />
+      <meta name='msapplication-TileImage' content='/images/vivid.png' />
       <meta name='theme-color' content='#18181b' />
     </Head>
   );
